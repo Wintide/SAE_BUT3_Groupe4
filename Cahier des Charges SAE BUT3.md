@@ -18,14 +18,14 @@ Application Web \- Calcul Distribué
   - [Contexte](#contexte)
   - [Objectifs](#objectifs)
 
-- [Pré-requis](#prerequis)
+- [Pré-requis](#prérequis)
   - Connaissances requises
   - Ressources matérielles  
   - Ressources logicielles
   - Identifiants obligatoires
 
 
-- [Priorités](#priorites)
+- [Priorités](#priorités)
 
 # Introduction
 
@@ -56,7 +56,7 @@ Les technologies principales imposées sont : ...
 
 Il faut également utiliser un dépôt GitHub partagé avec les enseignants, contenant le code et la documentation.
 
-### **Objectifs** {#objectifs}
+### **Objectifs**
 
 L’objectif principal du projet est de développer une application Web permettant à des chercheurs de réserver une ou plusieurs machines appartenant à une ferme de calcul composée de quatre Raspberry Pi 4\. L’application devra permettre :
 
