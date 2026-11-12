@@ -157,4 +157,4 @@ Priorité 3 — Améliorations
 * notifications ou confirmations ;  
 * statistiques d’utilisation des Raspberry Pi ;  
 * amélioration de l’ergonomie de l’application
-flAIFCv/1aI4cvo5CEQb/HJSAgdDffEWR4i9FfwAzAGoY8gXwiBjQyCCJnz+cf4WIiMKWf0lS2tDQ8LebUKBAgcJrNEsOI2HmLwyGcOtT5MXPvqJI8RdhRBXhxesnjfwwFPnqH+PPD2Q4GAIQ5Oa+gB/48y0pUKDwX4/myOFfenQi7aX+MGbkNUWK/w56ibCXbCn1er1YBX1YC0N+UhH/CchnNOz1R3QRt5fixzUE/PmWFChQ+K9Hc+SQAgUKFChQ+A8DJYcUKFCgQIECJYcUKFCgQIECJYcUKFCgQIECQckhBQoUKFCgQFBySIECBQoUKBCUHFKgQIECBQoEJYcUKFCgQIECQckhBQoUKFCgQFBySIECBQoUKBCUHFKgQIECBQoEJYcUKFCgQIECQckhBQoUKFCgAPi/MLz1MqwTT4cAAAAASUVORK5CYII=>
+
