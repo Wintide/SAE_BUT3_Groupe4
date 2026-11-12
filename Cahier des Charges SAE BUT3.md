@@ -7,7 +7,6 @@ PERES Thomas
 **Cahier des charges**   
 Application Web \- Calcul Distribué
 
-**![][image1]**
 
 # SOMMAIRE
 
