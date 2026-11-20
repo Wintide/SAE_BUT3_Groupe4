@@ -42,8 +42,7 @@ Les documents référencés sont les suivant :
 # Enoncé
 
 ### **Description du problème à résoudre** 
-La gestion de système distribué est un enjeu stratégique pour les chercheurs de toutes tailles. Cependant, elle peut rapidement devenir complexe avec l’augmentation du nombre de machines. L’information sur les équipements peut être peu accessible et non centralisée, ce qui rend sa mise à jour difficile.  
-Aussi, le suivi du cycle de vie du matériel peut générer des erreurs et manquer de traçabilité.
+La gestion de système distribué est un enjeu stratégique pour les chercheurs. Cependant, elle peut rapidement devenir complexe avec l’augmentation du nombre de machines. L’information sur les équipements peut être peu accessible et non centralisée, ce qui rend sa mise à jour difficile.  
 
 Pour y remédier, il est essentiel de développer une application web distribuée, permettant à différents utilisateurs d’accéder à des fonctionnalités adaptées à leur rôle, et ce en assurant la centralisation, la fiabilité et la sécurité des données.
 
