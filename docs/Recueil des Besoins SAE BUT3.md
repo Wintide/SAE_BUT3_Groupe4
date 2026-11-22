@@ -207,7 +207,15 @@ Les systèmes d'exploitation et les logiciels à installer sur les Raspberry Pi 
 | Raspberry Pi 5 frontal | Coordination du cluster et gestion des tâches |
 | Quatre Raspberry Pi 5 | Nœuds exécutant les calculs |
 
-## 
+**Raspberry Pi 4 Spécifications** : 
+
+- Processeur : ARM Cortex-A72  
+- Architecture : ARM 64 bits  
+- Nombre de coeurs : 4  
+- Fréquence CPU : 1,5 GHz  
+- RAM : 4 Go  
+- Stockage : Carte microSD de 16 Go  
+- Système d’exploitation : Debian 13 
 
 ### Technologies logicielles à étudier
 
