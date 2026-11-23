@@ -215,6 +215,16 @@ Les systèmes d'exploitation et les logiciels à installer sur les Raspberry Pi 
 - Fréquence CPU : 1,5 GHz  
 - RAM : 4 Go  
 - Stockage : Carte microSD de 16 Go  
+- Système d’exploitation : Debian 13
+
+**Raspberry Pi 5 Spécifications** : 
+
+- Processeur : ARM Cortex-A76  
+- Architecture : ARM 64 bits  
+- Nombre de coeurs : 4  
+- Fréquence CPU :  
+- RAM : 8 Go  
+- Stockage : Carte microSD de 16 Go  
 - Système d’exploitation : Debian 13 
 
 ### Technologies logicielles à étudier
