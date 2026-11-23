@@ -242,6 +242,24 @@ Technologies à détailler :
 - MPI  
 - Java Sockets
 
+Slurm — Gestion des tâches de calcul
+
+Slurm est un ordonnanceur qui gère les ressources d’un cluster. Lorsqu’une tâche est soumise, il vérifie les ressources demandées, choisit les machines sur lesquelles elle pourra s’exécuter et la place en file d’attente si les ressources nécessaires sont occupées.
+
+Dans notre projet, le Raspberry Pi 5 frontal hébergera le contrôleur Slurm. Il recevra les demandes de calcul et répartira les tâches sur les quatre Raspberry Pi 5 de calcul. Par exemple, si un chercheur demande deux nœuds, Slurm pourra lui attribuer deux machines disponibles et fournir un identifiant pour suivre l’exécution du calcul.
+
+MPI — Communication entre les processus de calcul
+
+MPI (Message Passing Interface) est un standard qui permet à plusieurs processus d’échanger des données, même lorsqu’ils s’exécutent sur des machines différentes. Un programme peut ainsi répartir le travail entre plusieurs processus et rassembler leurs résultats.
+
+Dans notre projet, le programme Python utilisera MPI sur les nœuds attribués par Slurm. Par exemple, si le programme analyse 100 images sur deux Raspberry Pi 5, chaque processus pourra en traiter 50, puis utiliser MPI pour réunir les résultats. C’est le programme Python qui définit la part du travail confiée à chaque processus.
+
+Sockets Java — Communication entre le serveur web et le frontal
+
+Les sockets Java permettent à deux programmes d’échanger des messages via une connexion TCP. Le serveur écoute sur un port avec ServerSocket, et le client se connecte à son adresse avec Socket.
+
+Dans notre projet, les sockets Java sont envisagées pour relier le serveur web du Raspberry Pi 4 au service de gestion du Raspberry Pi 5 frontal. Quand le chercheur demande de lancer un calcul, le serveur web transmet la demande au frontal, par exemple avec le nombre de nœuds souhaité. Le frontal soumet la tâche à Slurm, puis renvoie au serveur web l’identifiant du calcul ou un message d’erreur à afficher.
+
 ## (b) Systèmes avec lesquels le système communiquera  
 
 
