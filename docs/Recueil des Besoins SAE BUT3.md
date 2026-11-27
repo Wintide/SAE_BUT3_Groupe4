@@ -240,6 +240,10 @@ Les systèmes d'exploitation et les logiciels à installer sur les Raspberry Pi 
 | Base de données |  |  |
 | Gestion de versions | Git et GitHub | Suivre les modifications du code et collaborer |
 
+Versions :
+ - Python : 3.13.5
+ - MPI (mpi4py) : 4.0.3
+
 ## 
 
 Le choix de l'ordonnanceur devra tenir compte de la compatibilité avec les Raspberry Pi, de la complexité d'installation et d'administration, ainsi que des besoins réels du projet.
