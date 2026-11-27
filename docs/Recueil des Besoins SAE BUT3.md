@@ -250,11 +250,6 @@ Le choix de l'ordonnanceur devra tenir compte de la compatibilité avec les Rasp
 
 Le programme Python fourni servira de support pour vérifier le fonctionnement du calcul distribué. La compatibilité des bibliothèques nécessaires, notamment MPI si le programme l'utilise, devra être vérifiée sur l'environnement retenu.
 
-Technologies à détailler : 
-
-- SLURM  
-- MPI  
-- Java Sockets
 
 Slurm — Gestion des tâches de calcul
 
