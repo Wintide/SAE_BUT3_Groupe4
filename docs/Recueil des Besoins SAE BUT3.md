@@ -258,6 +258,16 @@ Slurm est un ordonnanceur qui gère les ressources d’un cluster. Lorsqu’une 
 
 Dans notre projet, le Raspberry Pi 5 frontal hébergera le contrôleur Slurm. Il recevra les demandes de calcul et répartira les tâches sur les quatre Raspberry Pi 5 de calcul. Par exemple, si un chercheur demande deux nœuds, Slurm pourra lui attribuer deux machines disponibles et fournir un identifiant pour suivre l’exécution du calcul.
 
+Slurm est le logiciel qui attribue les ressources de la ferme et coordonne l’exécution des calculs. Dans notre architecture, le Raspberry Pi 5 frontal héberge slurmctld, le service qui prend les décisions d’ordonnancement. Chacun des quatre Raspberry Pi 5 de calcul héberge slurmd, le service qui reçoit les demandes d’exécution sur sa machine. 
+
+Exemple dans notre projet. Un chercheur demande depuis l’application web un calcul sur deux Raspberry Pi 5, avec un processus par machine et une durée maximale de dix minutes. Voici ce qui se passe dans Slurm.
+Soumission du calcul. Le frontal soumet un script à Slurm avec sbatch. Le script précise les ressources demandées et la commande à exécuter. Slurm enregistre la demande sous un identifiant unique, par exemple 42. Cet identifiant permet au site de suivre le calcul dès sa soumission. 
+
+Attente et attribution. Le contrôleur slurmctld examine les ressources disponibles et la priorité des demandes. Si un seul Pi peut accueillir le calcul, la tâche reste en attente (PENDING). Lorsque deux nœuds peuvent être attribués, par exemple calcul2 et calcul4, Slurm crée une allocation, c’est-à-dire qu’il affecte les ressources demandées sur ces machines à la tâche 42. 
+Lancement sur les nœuds. Slurm démarre une seule copie du script sur l’un des nœuds attribués. À l’intérieur du script, une commande de lancement comme srun crée une étape de calcul. Sur chaque nœud concerné, slurmd démarre un processus slurmstepd qui lance et surveille les processus locaux. Dans cet exemple, un processus Python tourne sur calcul2 et l’autre sur calcul4. MPI intervient ensuite pour permettre aux deux processus d’échanger leurs données. 
+Suivi et fin du calcul. Pendant l’exécution, squeue permet de voir que la tâche est en cours (RUNNING). Par défaut, la sortie du script et ses erreurs sont écrites dans un fichier comme slurm-42.out. À la fin de la tâche, Slurm libère les ressources attribuées, qui peuvent alors servir à un autre calcul. 
+
+
 MPI — Communication entre les processus de calcul
 
 MPI (Message Passing Interface) est un standard qui permet à plusieurs processus d’échanger des données, même lorsqu’ils s’exécutent sur des machines différentes. Un programme peut ainsi répartir le travail entre plusieurs processus et rassembler leurs résultats.
